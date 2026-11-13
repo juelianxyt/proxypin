@@ -16,7 +16,6 @@
 
 import 'dart:io';
 
-import 'package:proxypin/ui/component/multi_window_compat.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -67,7 +66,6 @@ class _CertHashPageState extends State<CertHashPage> {
     if ((HardwareKeyboard.instance.isMetaPressed || HardwareKeyboard.instance.isControlPressed) &&
         event.logicalKey == LogicalKeyboardKey.keyW) {
       HardwareKeyboard.instance.removeHandler(onKeyEvent);
-      WindowController.fromWindowId(widget.windowId!).close();
       return true;
     }
 
@@ -94,13 +92,13 @@ class _CertHashPageState extends State<CertHashPage> {
                 },
                 style: Buttons.buttonStyle,
                 icon: const Icon(Icons.folder_open),
-                label: Text("File")),
+                label: Text(localizations.selectFile)),
             const SizedBox(width: 15),
             ElevatedButton.icon(
                 onPressed: () => input.clear(),
                 style: Buttons.buttonStyle,
                 icon: const Icon(Icons.clear),
-                label: const Text("Clear")),
+                label: Text(localizations.clear)),
             const SizedBox(width: 15),
             FilledButton.icon(
                 onPressed: () {
@@ -109,7 +107,7 @@ class _CertHashPageState extends State<CertHashPage> {
                 },
                 style: Buttons.buttonStyle,
                 icon: const Icon(Icons.play_arrow_rounded),
-                label: const Text("Run")),
+                label: Text(localizations.run)),
             const SizedBox(width: 15),
           ]),
           const SizedBox(width: 10),

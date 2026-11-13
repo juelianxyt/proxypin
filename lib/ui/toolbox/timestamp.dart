@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:proxypin/ui/component/multi_window_compat.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:proxypin/l10n/app_localizations.dart';
@@ -71,7 +70,6 @@ class _TimestampPageState extends State<TimestampPage> {
     if ((HardwareKeyboard.instance.isMetaPressed || HardwareKeyboard.instance.isControlPressed) &&
         event.logicalKey == LogicalKeyboardKey.keyW) {
       HardwareKeyboard.instance.removeHandler(onKeyEvent);
-      WindowController.fromWindowId(widget.windowId!).close();
       return true;
     }
 
@@ -171,7 +169,7 @@ class _TimestampPageState extends State<TimestampPage> {
         controller: timestamp,
         onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
         decoration: decoration(context,
-            hintText: 'timestamp',
+            hintText: localizations.timestampHint,
             suffixIcon: IconButton(icon: Icon(Icons.clear, size: 20), onPressed: () => timestamp.clear())));
   }
 

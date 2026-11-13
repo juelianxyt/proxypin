@@ -1464,6 +1464,277 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get filtered => '过滤';
+
+  @override
+  String get proxySetting => '代理设置';
+
+  @override
+  String get clickEdit => '点击编辑';
+
+  @override
+  String get profileDownload => '已下载描述文件';
+
+  @override
+  String get reconnect => '重新连接';
+
+  @override
+  String get connectedRemote => '已连接远程';
+
+  @override
+  String get iosVpnBackgroundAudio => '开启抓包后，退出到后台。为了维护主UI线程的网络通信，将启用静音音频播放以保持主线程运行。否则，它将只在后台运行30秒。您同意在启用抓包后在后台播放音频吗?';
+
+  @override
+  String get markRead => '标记已读';
+
+  @override
+  String get jsonViewer => 'JSON 工具';
+
+  @override
+  String get xmlViewer => 'XML 查看器';
+
+  @override
+  String get mcpServer => 'MCP 服务';
+
+  @override
+  String get mcpServerDesc => 'MCP 服务让 AI 工具能够访问抓包数据进行分析';
+
+  @override
+  String mcpRunning(Object port) {
+    return '正在运行，端口 $port';
+  }
+
+  @override
+  String get mcpStopped => '已停止';
+
+  @override
+  String get mcpAutoStart => '自动启动';
+
+  @override
+  String get mcpAutoStartDesc => 'App 启动时自动开启 MCP 服务';
+
+  @override
+  String get mcpStopToChange => '停止服务后可修改端口';
+
+  @override
+  String get mcpConnectionInfo => '连接信息';
+
+  @override
+  String get mcpConfigGuide => 'AI 配置指南';
+
+  @override
+  String get mcpGuideStep1 => '点击上方的开始按钮启动 MCP 服务。';
+
+  @override
+  String get mcpGuideStep2 => '复制 MCP 配置 JSON，添加到你的 AI 工具的 MCP 设置中。';
+
+  @override
+  String get mcpGuideStep3 => '支持的 AI 工具：Cursor、Windsurf、Claude Desktop 等。';
+
+  @override
+  String get mcpAvailableTools => '可用工具';
+
+  @override
+  String get mcpToolListDesc => '获取抓包请求列表（支持过滤）';
+
+  @override
+  String get mcpToolDetailDesc => '获取请求/响应完整详情';
+
+  @override
+  String get mcpToolStatsDesc => '获取流量统计分析';
+
+  @override
+  String get mcpToolSearchDesc => '高级多条件搜索';
+
+  @override
+  String get mcpToolBodyDesc => '获取请求/响应体内容';
+
+  @override
+  String get mcpToolAnalyzeDesc => '分析加密/编码内容并尝试解码';
+
+  @override
+  String get mcpToolDomainDesc => '按域名分组汇总请求数据';
+
+  @override
+  String get mcpToolCookieDesc => '提取和分析 Cookie 信息';
+
+  @override
+  String get mcpToolCompareDesc => '对比两个请求的差异';
+
+  @override
+  String mcpStartSuccess(Object port) {
+    return 'MCP 服务已启动，端口 $port';
+  }
+
+  @override
+  String get mcpStopSuccess => 'MCP 服务已停止';
+
+  @override
+  String get mcpInvalidPort => '无效的端口号';
+
+  @override
+  String get general => '概要';
+
+  @override
+  String get requestContentType => '请求内容类型';
+
+  @override
+  String get responseContentType => '响应内容类型';
+
+  @override
+  String get requestPackage => '请求大小';
+
+  @override
+  String get responsePackage => '响应大小';
+
+  @override
+  String get requestParams => '请求参数';
+
+  @override
+  String get headers => '头部';
+
+  @override
+  String get headerViewText => '头部视图: 文本';
+
+  @override
+  String get headerViewTable => '头部视图: 表格';
+
+  @override
+  String get body => '消息体';
+
+  @override
+  String get data => '数据';
+
+  @override
+  String get videoNotSupportPreview => '暂不支持视频预览';
+
+  @override
+  String get viewTypeText => '文本';
+
+  @override
+  String get viewTypeUrlDecode => 'URL 解码';
+
+  @override
+  String get viewTypeImage => '图片';
+
+  @override
+  String get viewTypeVideo => '视频';
+
+  @override
+  String get viewTypeHex => '十六进制';
+
+  @override
+  String get caseSensitive => '区分大小写';
+
+  @override
+  String get toggleReplace => '切换替换';
+
+  @override
+  String get previous => '上一个';
+
+  @override
+  String get next => '下一个';
+
+  @override
+  String get replaceAll => '全部替换';
+
+  @override
+  String get host => '主机';
+
+  @override
+  String get portLabel => '端口';
+
+  @override
+  String get run => '运行';
+
+  @override
+  String get result => '结果';
+
+  @override
+  String get readOnly => '只读';
+
+  @override
+  String get jsonFormat => 'JSON 格式化';
+
+  @override
+  String get regexpPattern => '正则表达式';
+
+  @override
+  String get regexpPatternHint => '输入正则表达式';
+
+  @override
+  String get regexpDigits => '数字';
+
+  @override
+  String get regexpLetters => '字母';
+
+  @override
+  String get regexpAlphanumeric => '字母数字';
+
+  @override
+  String get regexpEmail => '邮箱';
+
+  @override
+  String get regexpDate => '日期 (YYYY-MM-DD)';
+
+  @override
+  String get replaceTextLabel => '替换文本';
+
+  @override
+  String get replaceTextHint => '输入替换内容';
+
+  @override
+  String get invalidRegexp => '无效的正则表达式';
+
+  @override
+  String get aesMode => '模式';
+
+  @override
+  String get aesPadding => '填充';
+
+  @override
+  String get aesKeyLength => '密钥长度';
+
+  @override
+  String get urlEncodeDecode => 'URL 编码/解码';
+
+  @override
+  String get base64EncodeDecode => 'Base64 编码/解码';
+
+  @override
+  String get unicodeEncodeDecode => 'Unicode 编码/解码';
+
+  @override
+  String get md5Hash => 'MD5 哈希';
+
+  @override
+  String get aesEncryptDecrypt => 'AES 加密/解密';
+
+  @override
+  String get mcpServerForAi => '面向 AI 的 MCP 服务';
+
+  @override
+  String get jsonViewerTitle => 'JSON 查看器';
+
+  @override
+  String get xmlViewerTitle => 'XML 查看器';
+
+  @override
+  String get timestampHint => '时间戳';
+
+  @override
+  String get p12PasswordHint => '输入 p12 文件的密码';
+
+  @override
+  String get p12PasswordSetHint => '设置用于保护 p12 文件的密码';
+
+  @override
+  String get clearMessages => '清空消息';
+
+  @override
+  String get jumpToLatestMessages => '跳转到最新消息';
+
+  @override
+  String get cookies => 'Cookies';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -2738,4 +3009,263 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get filtered => '過濾';
+
+  @override
+  String get proxySetting => '代理設定';
+
+  @override
+  String get clickEdit => '點選編輯';
+
+  @override
+  String get profileDownload => '已下載描述檔案';
+
+  @override
+  String get reconnect => '重新連接';
+
+  @override
+  String get connectedRemote => '已連接遠端';
+
+  @override
+  String get mcpServer => 'MCP 服務';
+
+  @override
+  String get mcpServerDesc => 'MCP 服務讓 AI 工具能夠存取抓包資料進行分析';
+
+  @override
+  String mcpRunning(Object port) {
+    return '正在運行，連接埠 $port';
+  }
+
+  @override
+  String get mcpStopped => '已停止';
+
+  @override
+  String get mcpAutoStart => '自動啟動';
+
+  @override
+  String get mcpAutoStartDesc => 'App 啟動時自動開啟 MCP 服務';
+
+  @override
+  String get mcpStopToChange => '停止服務後可修改連接埠';
+
+  @override
+  String get mcpConnectionInfo => '連線資訊';
+
+  @override
+  String get mcpConfigGuide => 'AI 設定指南';
+
+  @override
+  String get mcpGuideStep1 => '點選上方的開始按鈕啟動 MCP 服務。';
+
+  @override
+  String get mcpGuideStep2 => '複製 MCP 設定 JSON，新增到你的 AI 工具的 MCP 設定中。';
+
+  @override
+  String get mcpGuideStep3 => '支援的 AI 工具：Cursor、Windsurf、Claude Desktop 等。';
+
+  @override
+  String get mcpAvailableTools => '可用工具';
+
+  @override
+  String get mcpToolListDesc => '取得抓包請求列表（支援過濾）';
+
+  @override
+  String get mcpToolDetailDesc => '取得請求/回應完整詳情';
+
+  @override
+  String get mcpToolStatsDesc => '取得流量統計分析';
+
+  @override
+  String get mcpToolSearchDesc => '進階多條件搜尋';
+
+  @override
+  String get mcpToolBodyDesc => '取得請求/回應體內容';
+
+  @override
+  String get mcpToolAnalyzeDesc => '分析加密/編碼內容並嘗試解碼';
+
+  @override
+  String get mcpToolDomainDesc => '按域名分組匯總請求資料';
+
+  @override
+  String get mcpToolCookieDesc => '提取和分析 Cookie 資訊';
+
+  @override
+  String get mcpToolCompareDesc => '對比兩個請求的差異';
+
+  @override
+  String mcpStartSuccess(Object port) {
+    return 'MCP 服務已啟動，連接埠 $port';
+  }
+
+  @override
+  String get mcpStopSuccess => 'MCP 服務已停止';
+
+  @override
+  String get mcpInvalidPort => '無效的連接埠號';
+
+  @override
+  String get general => '概要';
+
+  @override
+  String get requestContentType => '請求內容類型';
+
+  @override
+  String get responseContentType => '回應內容類型';
+
+  @override
+  String get requestPackage => '請求大小';
+
+  @override
+  String get responsePackage => '回應大小';
+
+  @override
+  String get requestParams => '請求參數';
+
+  @override
+  String get headers => '標頭';
+
+  @override
+  String get headerViewText => '標頭檢視: 文字';
+
+  @override
+  String get headerViewTable => '標頭檢視: 表格';
+
+  @override
+  String get body => '訊息內容';
+
+  @override
+  String get data => '資料';
+
+  @override
+  String get videoNotSupportPreview => '暫不支援影片預覽';
+
+  @override
+  String get viewTypeText => '文字';
+
+  @override
+  String get viewTypeUrlDecode => 'URL 解碼';
+
+  @override
+  String get viewTypeImage => '圖片';
+
+  @override
+  String get viewTypeVideo => '影片';
+
+  @override
+  String get viewTypeHex => '十六進位';
+
+  @override
+  String get caseSensitive => '區分大小寫';
+
+  @override
+  String get toggleReplace => '切換替換';
+
+  @override
+  String get previous => '上一個';
+
+  @override
+  String get next => '下一個';
+
+  @override
+  String get replaceAll => '全部替換';
+
+  @override
+  String get host => '主機';
+
+  @override
+  String get portLabel => '連接埠';
+
+  @override
+  String get run => '執行';
+
+  @override
+  String get result => '結果';
+
+  @override
+  String get readOnly => '唯讀';
+
+  @override
+  String get jsonFormat => 'JSON 格式化';
+
+  @override
+  String get regexpPattern => '正規表達式';
+
+  @override
+  String get regexpPatternHint => '輸入正規表達式';
+
+  @override
+  String get regexpDigits => '數字';
+
+  @override
+  String get regexpLetters => '字母';
+
+  @override
+  String get regexpAlphanumeric => '字母數字';
+
+  @override
+  String get regexpEmail => '電子郵件';
+
+  @override
+  String get regexpDate => '日期 (YYYY-MM-DD)';
+
+  @override
+  String get replaceTextLabel => '替換文字';
+
+  @override
+  String get replaceTextHint => '輸入替換內容';
+
+  @override
+  String get invalidRegexp => '無效的正規表達式';
+
+  @override
+  String get aesMode => '模式';
+
+  @override
+  String get aesPadding => '填充';
+
+  @override
+  String get aesKeyLength => '金鑰長度';
+
+  @override
+  String get urlEncodeDecode => 'URL 編碼/解碼';
+
+  @override
+  String get base64EncodeDecode => 'Base64 編碼/解碼';
+
+  @override
+  String get unicodeEncodeDecode => 'Unicode 編碼/解碼';
+
+  @override
+  String get md5Hash => 'MD5 雜湊';
+
+  @override
+  String get aesEncryptDecrypt => 'AES 加密/解密';
+
+  @override
+  String get mcpServerForAi => '面向 AI 的 MCP 服務';
+
+  @override
+  String get jsonViewerTitle => 'JSON 檢視器';
+
+  @override
+  String get xmlViewerTitle => 'XML 檢視器';
+
+  @override
+  String get timestampHint => '時間戳';
+
+  @override
+  String get p12PasswordHint => '輸入 p12 檔案的密碼';
+
+  @override
+  String get p12PasswordSetHint => '設定用於保護 p12 檔案的密碼';
+
+  @override
+  String get clearMessages => '清空訊息';
+
+  @override
+  String get jumpToLatestMessages => '跳至最新訊息';
+
+  @override
+  String get cookies => 'Cookies';
 }

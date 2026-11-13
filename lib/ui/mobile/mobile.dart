@@ -33,6 +33,7 @@ import 'package:proxypin/network/http/http.dart';
 import 'package:proxypin/network/http/websocket.dart';
 import 'package:proxypin/network/http/http_client.dart';
 import 'package:proxypin/mcp/mcp_service.dart';
+import 'package:proxypin/network/mcp/mcp_server.dart';
 import 'package:proxypin/storage/histories.dart';
 import 'package:proxypin/ui/component/memory_cleanup.dart';
 import 'package:proxypin/ui/component/multi_select_controller.dart';
@@ -134,6 +135,10 @@ class MobileHomeState extends State<MobileHomePage> implements EventListener, Li
     // 启动历史记录任务（单例；原由 ConfigPage 触发，配置页移除后在这里保证初始化）
     HistoryTask.ensureInstance(widget.configuration, MobileApp.container);
     _remoteHistorySubscription = HistoryStorage.onRemoteImported.listen((item) => _openHistoryPage(item));
+    // 本 fork 的 MCP Server（端口 9010）：绑定抓包数据容器，供 AI 工具实时查询
+    McpServer.instance.bindRequestContainer(MobileApp.container);
+    // 按配置自动启动（默认开启，可在 工具箱 -> MCP Server 关闭）
+    unawaited(McpServer.instance.autoStartIfEnabled());
 
     // MCP 局域网服务：启用时随抓包一起启动，clear_session 同步清空界面列表
     McpService.instance.clearUiSession = () async {

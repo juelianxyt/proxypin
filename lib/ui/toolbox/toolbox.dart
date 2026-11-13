@@ -6,6 +6,7 @@ import 'package:proxypin/ui/component/multi_window.dart';
 import 'package:proxypin/ui/desktop/left_menus/replay_tasks.dart' as desktop;
 import 'package:proxypin/ui/mobile/request/replay_tasks.dart';
 import 'package:proxypin/ui/mobile/request/request_editor.dart';
+import 'package:proxypin/ui/toolbox/mcp_server_page.dart';
 import 'package:proxypin/ui/toolbox/qr_code_page.dart';
 import 'package:proxypin/ui/toolbox/regexp.dart';
 import 'package:proxypin/ui/toolbox/timestamp.dart';
@@ -278,6 +279,18 @@ class _ToolboxState extends State<Toolbox> {
                       text: localizations.qrCode,
                       color: AppColors.toolQrCode,
                       tooltip: localizations.qrCode),
+                  IconText(
+                      onTap: () async {
+                        if (Platforms.isMobile()) {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const McpServerPage()));
+                          return;
+                        }
+                        MultiWindow.openWindow('MCP Server', 'McpServerPage');
+                      },
+                      icon: Icons.hub_outlined,
+                      text: 'MCP Server',
+                      color: AppColors.toolQrCode,
+                      tooltip: localizations.mcpServerForAi),
               ]),
             ],
           ),
